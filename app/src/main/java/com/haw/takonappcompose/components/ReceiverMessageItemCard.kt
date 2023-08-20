@@ -23,7 +23,7 @@ import com.haw.takonappcompose.R
 import com.haw.takonappcompose.ui.theme.GrayColor
 
 @Composable
-fun ReceiverMessageItem(
+fun ReceiverMessageItemCard(
     modifier: Modifier = Modifier
 ) {
     Row(
@@ -68,7 +68,7 @@ fun ReceiverMessageItem(
 @Preview
 @Composable
 fun ReceiverMessageItemPreview() {
-    ReceiverMessageItem(
+    ReceiverMessageItemCard(
         modifier = Modifier.fillMaxWidth()
     )
 }

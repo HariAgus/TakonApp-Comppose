@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.haw.takonappcompose.ui.theme.BluePrimary
 
 @Composable
-fun MessengerItem(
+fun MessengerItemCard(
     modifier: Modifier = Modifier
 ) {
     Surface(
@@ -36,5 +36,5 @@ fun MessengerItem(
 @Preview
 @Composable
 fun MessengerItemPreview() {
-    MessengerItem()
+    MessengerItemCard()
 }
