@@ -10,6 +10,6 @@ interface AnswerDao {
     fun addAnswer(answerEntity: AnswerEntity)
 
     @Query("SELECT * FROM `answers`")
-    fun getAnswer(): Flow<AnswerEntity>
+    fun getAnswer(): Flow<List<AnswerEntity>>
 
 }
