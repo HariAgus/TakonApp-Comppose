@@ -1,4 +1,4 @@
-package com.haw.takonappcompose.components
+package com.haw.takonappcompose.presentation.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Row
