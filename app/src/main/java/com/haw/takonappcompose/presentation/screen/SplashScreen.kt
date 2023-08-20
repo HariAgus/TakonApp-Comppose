@@ -1,4 +1,4 @@
-package com.haw.takonappcompose.presentation
+package com.haw.takonappcompose.presentation.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
