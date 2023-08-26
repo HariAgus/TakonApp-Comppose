@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.haw.takonappcompose"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.haw.takonappcompose"
@@ -31,11 +31,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+         jvmTarget = "17"
     }
     buildFeatures {
         compose = true
@@ -70,7 +70,7 @@ dependencies {
 
     // Koin
     implementation("io.insert-koin:koin-android:3.4.0")
-    implementation("io.insert-koin:koin-androidx-compose:3.4.0")
+    implementation("io.insert-koin:koin-androidx-compose:3.4.4")
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -80,6 +80,12 @@ dependencies {
     implementation("androidx.room:room-runtime:2.5.2")
     annotationProcessor("androidx.room:room-compiler:2.5.2")
     implementation("androidx.room:room-ktx:2.5.2")
-    kapt("androidx.room:room-compiler:")
+    kapt("androidx.room:room-compiler:2.5.2")
+
+    // Navigation
+    implementation("androidx.navigation:navigation-compose:2.7.0")
+
+    // Accompanist
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.27.0")
 
 }
