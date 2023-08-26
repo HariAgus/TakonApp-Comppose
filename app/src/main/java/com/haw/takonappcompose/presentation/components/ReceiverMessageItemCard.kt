@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -34,12 +35,13 @@ fun ReceiverMessageItemCard(
                 .wrapContentSize()
                 .align(Alignment.Bottom),
             shape = CircleShape,
-            color = Color.White
+            color = Color.White,
+            shadowElevation = 4.dp
         ) {
             Image(
                 modifier = Modifier
                     .padding(horizontal = 8.dp, vertical = 6.dp)
-                    .size(22.dp),
+                    .size(18.dp),
                 painter = painterResource(id = R.drawable.ic_takon_boot),
                 contentDescription = ""
             )
@@ -59,7 +61,8 @@ fun ReceiverMessageItemCard(
                 text = "There are many programming languages \u200B\u200Bin the market that are " +
                         "used in designing and building websites, various applications and other tasks. " +
                         "All these languages \u200B\u200Bare popular in their place and in the way they are used, " +
-                        "and many programmers learn and use them."
+                        "and many programmers learn and use them.",
+                style = MaterialTheme.typography.labelLarge.copy(color = Color(0xFF505050))
             )
         }
     }

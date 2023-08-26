@@ -30,7 +30,7 @@ fun WriteMessageCard(
 ) {
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shadowElevation = 8.dp,
+        shadowElevation = 6.dp,
         color = Color.White,
         shape = RoundedCornerShape(30.dp),
     ) {
@@ -53,7 +53,10 @@ fun WriteMessageCard(
             },
             colors = TextFieldDefaults.textFieldColors(
                 placeholderColor = GrayColor,
-                containerColor = Color.White
+                containerColor = Color.White,
+                focusedIndicatorColor = Color.Transparent,
+                unfocusedIndicatorColor = Color.Transparent,
+                disabledIndicatorColor = Color.Transparent
             )
         )
     }

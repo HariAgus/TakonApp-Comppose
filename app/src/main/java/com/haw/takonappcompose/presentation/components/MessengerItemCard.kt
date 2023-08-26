@@ -3,6 +3,7 @@ package com.haw.takonappcompose.presentation.components
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,7 +29,7 @@ fun MessengerItemCard(
                 .padding(horizontal = 24.dp, vertical = 18.dp),
             text = "So Explain to me more",
             textAlign = TextAlign.Center,
-            color = Color.White
+            style = MaterialTheme.typography.labelLarge.copy(color = Color.White)
         )
     }
 }

@@ -12,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,11 +21,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.haw.takonappcompose.R
 import com.haw.takonappcompose.ui.theme.BluePrimary
+import com.haw.takonappcompose.ui.theme.TextColorGray
 
 @Composable
 fun OnBoardingScreen() {
@@ -45,6 +49,10 @@ fun OnBoardingScreen() {
                 Text(
                     text = "You AI Assistant",
                     color = BluePrimary,
+                    style = MaterialTheme.typography.titleMedium.copy(
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 23.sp
+                    )
                 )
 
                 Spacer(modifier = Modifier.height(14.dp))
@@ -53,7 +61,11 @@ fun OnBoardingScreen() {
                     text = "Using this software,you can ask you\n" +
                             "questions and receive articles using\n" +
                             "artificial intelligence assistant",
-                    textAlign = TextAlign.Center
+                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.labelSmall.copy(
+                        fontSize = 15.sp,
+                        color = TextColorGray
+                    )
                 )
 
                 Image(
@@ -75,7 +87,11 @@ fun OnBoardingScreen() {
                 Text(
                     modifier = Modifier.weight(1f),
                     textAlign = TextAlign.Center,
-                    text = "Continue"
+                    text = "Continue",
+                    style = MaterialTheme.typography.titleLarge.copy(
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 19.sp
+                    )
                 )
 
                 Image(
