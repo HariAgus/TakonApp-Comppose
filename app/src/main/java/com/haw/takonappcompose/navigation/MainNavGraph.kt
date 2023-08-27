@@ -17,13 +17,13 @@ fun MainNavGraph(navController: NavHostController) {
         startDestination = Screen.Splash.route
     ) {
         composable(route = Screen.Splash.route) {
-            SplashScreen()
+            SplashScreen(navController = navController)
         }
         composable(route = Screen.OnBoarding.route) {
-            OnBoardingScreen()
+            OnBoardingScreen(navController = navController)
         }
         composable(route = Screen.Message.route) {
-            MessageScreen()
+            MessageScreen(navController = navController)
         }
     }
 
