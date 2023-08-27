@@ -16,7 +16,8 @@ import com.haw.takonappcompose.ui.theme.BluePrimary
 
 @Composable
 fun MessengerItemCard(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    message: String = ""
 ) {
     Surface(
         modifier = modifier,
@@ -27,7 +28,7 @@ fun MessengerItemCard(
             modifier = Modifier
                 .wrapContentSize()
                 .padding(horizontal = 24.dp, vertical = 18.dp),
-            text = "So Explain to me more",
+            text = message,
             textAlign = TextAlign.Center,
             style = MaterialTheme.typography.labelLarge.copy(color = Color.White)
         )

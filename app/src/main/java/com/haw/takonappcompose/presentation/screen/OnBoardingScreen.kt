@@ -26,12 +26,17 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.haw.takonappcompose.R
+import com.haw.takonappcompose.navigation.Screen
 import com.haw.takonappcompose.ui.theme.BluePrimary
 import com.haw.takonappcompose.ui.theme.TextColorGray
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    navController: NavController
+) {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = Color.White
@@ -83,7 +88,11 @@ fun OnBoardingScreen() {
                     .fillMaxWidth()
                     .padding(bottom = 34.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = BluePrimary),
-                onClick = { /*TODO*/ }) {
+                onClick = {
+                    navController.popBackStack()
+                    navController.navigate(route = Screen.Message.route)
+                }
+            ) {
                 Text(
                     modifier = Modifier.weight(1f),
                     textAlign = TextAlign.Center,
@@ -109,5 +118,5 @@ fun OnBoardingScreen() {
 @Preview
 @Composable
 fun OnBoardingScreePreview() {
-    OnBoardingScreen()
+    OnBoardingScreen(navController = rememberNavController())
 }

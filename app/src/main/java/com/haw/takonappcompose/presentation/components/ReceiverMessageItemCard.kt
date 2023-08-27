@@ -25,7 +25,8 @@ import com.haw.takonappcompose.ui.theme.GrayColor
 
 @Composable
 fun ReceiverMessageItemCard(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    message: String = ""
 ) {
     Row(
         modifier = modifier
@@ -58,10 +59,7 @@ fun ReceiverMessageItemCard(
         ) {
             Text(
                 modifier = Modifier.padding(horizontal = 14.dp, vertical = 24.dp),
-                text = "There are many programming languages \u200B\u200Bin the market that are " +
-                        "used in designing and building websites, various applications and other tasks. " +
-                        "All these languages \u200B\u200Bare popular in their place and in the way they are used, " +
-                        "and many programmers learn and use them.",
+                text = message,
                 style = MaterialTheme.typography.labelLarge.copy(color = Color(0xFF505050))
             )
         }
